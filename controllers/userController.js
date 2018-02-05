@@ -1,6 +1,8 @@
+import User from '../models/user';
+
 module.exports = {
   index(req,res){
-    res.render('index',{data:'Rendering data from controller'});
+    res.render('profile',{data:'Rendering data from controller'});
   },
   store(req,res){
     res.render('index',{data:'Rendering data from controller - Store'});
@@ -17,5 +19,16 @@ module.exports = {
   edit(req,res){
     res.render('index',{data:'Rendering data from controller - Edit'});
     console.log(req.body);
+  },
+  facebook(req,res){
+
+    User.findOne()
+      .then((result)=>{
+        console.log(result);
+        return res.render('profile',result);
+      })
+      .catch(() => {
+				return res.send(null,503);
+			});
   }
 }

@@ -1,5 +1,5 @@
 {
-  "name": "NodeConfiguration",
+  "name": "MultiLogin",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -24,5 +24,10 @@
     "mongodb": "^3.0.2",
     "nodemon": "^1.14.11",
     "pug": "^2.0.0-rc.4"
+  },
+  "dependencies": {
+    "bcrypt": "^1.0.3",
+    "passport": "^0.4.0",
+    "passport-facebook": "^2.1.1"
   }
 }
