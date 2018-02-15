@@ -6,9 +6,7 @@ var users;
 
 module.exports.create = (data) => {
   users = global.db.collection("users");
-  let {email, name } = data;
-  let user = {email, name };
-  return new Promise((resolve,reject)=> users.insert(user,(err,result)=>{
+  return new Promise((resolve,reject)=> users.insert(data,(err,result)=>{
       if(err) reject(err);
       resolve(result.ops[0]);
   } ))

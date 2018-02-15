@@ -26,6 +26,8 @@
     "pug": "^2.0.0-rc.4"
   },
   "dependencies": {
-    "bcrypt": "^1.0.3"
+    "bcrypt": "^1.0.3",
+    "passport": "^0.4.0",
+    "passport-facebook": "^2.1.1"
   }
 }
