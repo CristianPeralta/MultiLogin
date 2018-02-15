@@ -16,6 +16,7 @@ routes.get('/auth/facebook/callback',
     return res.render('index', {'user':req.user});
   });
 
+
 routes.post('/create',userController.create);
 routes.get('/read',userController.read);
 routes.put('/update',userController.update);
